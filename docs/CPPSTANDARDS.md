@@ -16,27 +16,27 @@ C++ allows for arbitrary length identifier names, so there's no reason to be ter
 
 ### Distinguish Private Object Data
 
-Name static global data with a `s_` prefix to distinguish it from private data.
-Name private data with a `m_` prefix to distinguish it from public data.
+* Name static global data with a `s_` prefix to distinguish it from private data.
+* Name private data with a `m_` prefix to distinguish it from public data.
 
 ### Well formed example
 
 ```cpp
 class MyClass
 {
-public:
-    MyClass(int data)
-        : m_data(data)
-    {
-    }
+    public:
+        MyClass(int data)
+            : m_data(data)
+        {
+        }
 
-    int getData() const
-    {
-        return m_data;
-    }
+        int getData() const
+        {
+            return m_data;
+        }
 
-private:
-    int m_data;
+    private:
+        int m_data;
 };
 ```
 
@@ -87,15 +87,15 @@ Header files must contain an distinctly named include guard to avoid problems wi
 
 namespace Myproject
 {
-  class MyClass
-  {
-  };
+    class MyClass
+    {
+    };
 }
 
 #endif
 ```
 
-## 4 spaces indent level.
+## 4 spaces indent level
 
 Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
 
@@ -103,10 +103,10 @@ Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Mo
 // Good Idea
 int myFunction(bool b)
 {
-  if (b)
-  {
-    // do something
-  }
+    if (b)
+    {
+        // do something
+    }
 }
 ```
 
@@ -118,14 +118,14 @@ Leaving them off can lead to semantic errors in the code.
 // this compiles and does what you want, but can lead to confusing
 // errors if close attention is not paid.
 for (int i = 0; i < 15; ++i)
-  std::cout << i << std::endl;
+    std::cout << i << std::endl;
 
 // Bad Idea
 // the cout is not part of the loop in this case even though it appears to be
 int sum = 0;
 for (int i = 0; i < 15; ++i)
-  ++sum;
-  std::cout << i << std::endl;
+    ++sum;
+    std::cout << i << std::endl;
 
 
 // Good Idea
@@ -133,29 +133,28 @@ for (int i = 0; i < 15; ++i)
 int sum = 0;
 for (int i = 0; i < 15; ++i)
 {
-  ++sum;
-  std::cout << i << std::endl;
+    ++sum;
+    std::cout << i << std::endl;
 }
 ```
 
 ## Allman style braces
+This style puts the brace associated with a control statement on the next line, indented to the same level as the control statement. Statements within the braces are indented to the next level.
 
 ```cpp
 // Bad Idea
 // It isn't clear where the braces start
 for (int i = 0; i < 15; ++i) {
-  ++sum;
-  std::cout << i << std::endl;
+    ++sum;
+    std::cout << i << std::endl;
 }
 
 // Good Idea
-// This style puts the brace associated with a control statement on the next line,
-// indented to the same level as the control statement.
-// Statements within the braces are indented to the next level.
+// It is clear where the braces start
 for (int i = 0; i < 15; ++i)
 {
-  ++sum;
-  std::cout << i << std::endl;
+    ++sum;
+    std::cout << i << std::endl;
 }
 ```
 
@@ -177,9 +176,8 @@ if (x && y && myFunctionThatReturnsBool()
 }
 ```
 
-
 ## Use "" For Including Local Files
-... `<>` is [reserved for system includes](http://blog2.emptycrate.com/content/when-use-include-verses-include).
+... `<>` is reserved for system includes.
 
 ```cpp
 // Bad Idea. Requires extra -I directives to the compiler
@@ -208,14 +206,14 @@ if (x && y && myFunctionThatReturnsBool()
 // Bad Idea
 class MyClass
 {
-public:
-  MyClass(int value)
-  {
-    m_value = value;
-  }
+    public:
+        MyClass(int value)
+        {
+            m_value = value;
+        }
 
-private:
-  int m_value;
+    private:
+        int m_value;
 };
 
 
@@ -225,14 +223,14 @@ private:
 // match
 class MyClass
 {
-public:
-  MyClass(int value)
-    : m_value(value)
-  {
-  }
+    public:
+        MyClass(int value)
+          : m_value(value)
+        {
+        }
 
-private:
-  int m_value;
+    private:
+        int m_value;
 };
 ```
 
@@ -269,11 +267,11 @@ Compiler definitions and macros are replaced by the pre-processor before the com
 // Good Idea
 namespace Myproject
 {
-  class Constants
-  {
-    public:
-      static const double PI = 3.14159;
-  }
+    class Constants
+    {
+        public:
+            static const double PI = 3.14159;
+    }
 }
 
 // Bad Idea
@@ -288,16 +286,16 @@ Variables should be declared as late as possible, and ideally, only when it's po
 // Good idea
 for (int i = 0; i < 15; ++i)
 {
-  MyObject obj(i);
-  // do something with obj
+    MyObject obj(i);
+    // do something with obj
 }
 
 // Bad Idea
 MyObject obj; // meaningless object initialization
 for (int i = 0; i < 15; ++i)
 {
-  obj = MyObject(i); // unnecessary assignment operation
-  // do something with obj
+    obj = MyObject(i); // unnecessary assignment operation
+    // do something with obj
 }
 // obj is still taking up memory for no reason
 ```
@@ -339,14 +337,14 @@ Global data leads to unintended sideeffects between functions and can make code 
 // Bad Idea
 for (int i = 0; i < 15; i++)
 {
-  std::cout << i << std::endl;
+    std::cout << i << std::endl;
 }
 
 
 // Good Idea
 for (int i = 0; i < 15; ++i)
 {
-  std::cout << i << std::endl;
+    std::cout << i << std::endl;
 }
 
 ```
@@ -358,38 +356,38 @@ for (int i = 0; i < 15; ++i)
 // Bad Idea
 class MyClass
 {
-public:
-  MyClass(std::string value)
-    : m_value(value)
-  {
-  }
+  public:
+      MyClass(std::string value)
+        : m_value(value)
+      {
+      }
 
-  std::string get_value()
-  {
-    return m_value;
-  }
+      std::string get_value()
+      {
+          return m_value;
+      }
 
-private:
-  std::string m_value;
+  private:
+      std::string m_value;
 }
 
 
 // Good Idea
 class MyClass
 {
-public:
-  MyClass(const std::string &value)
-    : m_value(value)
-  {
-  }
+  public:
+      MyClass(const std::string &value)
+        : m_value(value)
+      {
+      }
 
-  std::string get_value() const
-  {
-    return m_value;
-  }
+      std::string get_value() const
+      {
+          return m_value;
+      }
 
-private:
-  std::string m_value;
+  private:
+      std::string m_value;
 }
 ```
 

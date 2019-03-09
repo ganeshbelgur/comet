@@ -16,7 +16,7 @@ Before starting, it is important to note that at the moment:
 
 Beamdish is in very early stages of development. However, we welcome your pull requests, ideas and suggestions!
 
-Please read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. The coding standards for writing C++ code are described in detail at [CPPSTANDARDS](docs/CPPSTANDARDS.md)
+Please read [CONTRIBUTING](docs/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. The coding standards for writing C++ code are described in detail at [CPPSTANDARDS](docs/CPPSTANDARDS.md)
 
 ## Versioning
 
@@ -28,7 +28,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
