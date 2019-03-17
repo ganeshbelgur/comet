@@ -18,7 +18,7 @@ Before starting, it is important to note that at the moment:
 make
 ```
 
-2. This builds all the object files and the main executable, named `beamdish`, under the newly created bin/ folder. To clean the build i.e. to delete the bin/ folder and all the `*.o` files, run the command:
+2. This builds all the object files and the main executable, named `beamdish`, under the newly created `bin/` folder. To clean the build i.e. to delete the `bin/` folder and all the `*.o` files, run the command:
 
 ```bash
 make clean
@@ -39,7 +39,7 @@ To run the executable, use the following command at the project's root directory
 ./bin/beamdish > nameOfMyScene.ppm
 ```
 
-The final product of any renderer is an image file and beamdish currently creates a primitive raw format PPM file of the rendered scene that was hard coded into the program at the time of building. 
+The final product of any renderer is an image file and beamdish currently outputs the color information of each pixel of the image in the PPM file standard. The color information needs to be redirected into a PPM file to be able to view it from any standard Linux image viewers. The rendered image is of the hard coded scene in the program at the time of building.
 
 ## Contributing
 
