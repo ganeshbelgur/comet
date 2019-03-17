@@ -4,7 +4,10 @@ CFLAGS = -Wall
 BUILD_DIR = bin
 
 SOURCE_FILES = \
-	$(wildcard beamdish/utils/*.cpp)
+	$(wildcard beamdish/utils/*.cpp) \
+	$(wildcard beamdish/primitives/*.cpp) \
+	$(wildcard beamdish/textures/*.cpp) \
+	$(wildcard beamdish/materials/*.cpp)
 
 OBJECT_FILES = $(patsubst %,$(BUILD_DIR)/%, $(notdir $(SOURCE_FILES:.cpp=.o)))
 
