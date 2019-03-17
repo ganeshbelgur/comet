@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Before starting, it is important to note that at the moment:
 * Beamdish is supported only on Linux and we hope to support other platforms soon.
-* Beamdish doesn't support any three-dimensional scene description file formats such as USD, Alembic, etc. So, the scenes need to be hard coded into the program for rendering purposes.
+* Beamdish doesn't support any three-dimensional scene description file formats such as USD, Alembic, etc. So, the scenes need to be hard coded in the test cases for rendering purposes.
 
 **TODO: Write instructions to build Beamdish**
 
