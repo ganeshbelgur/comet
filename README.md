@@ -10,7 +10,36 @@ Before starting, it is important to note that at the moment:
 * Beamdish is supported only on Linux and we hope to support other platforms soon.
 * Beamdish doesn't support any three-dimensional scene description file formats such as USD, Alembic, etc. So, the scenes need to be hard coded in the test cases for rendering purposes.
 
-**TODO: Write instructions to build Beamdish**
+### Building from source
+
+1. We use the good old GNU Make for building the source code at the moment. To build the code, you'll need to simply run the make command at the root directory of the project.
+
+```bash
+make
+```
+
+2. This builds all the object files and the main executable, named `beamdish`, under the newly created bin/ folder. To clean the build i.e. to delete the bin/ folder and all the `*.o` files, run the command:
+
+```bash
+make clean
+```
+
+3. To see the source files that is going to be compiled, run the command:
+
+```bash
+make help
+```
+
+### Running the program
+
+Once you are done building the executable called `beamdish` from the source, you are good to execute it.
+To run the executable, use the following command at the project's root directory:
+
+```bash
+./bin/beamdish > nameOfMyScene.ppm
+```
+
+The final product of any renderer is an image file and beamdish currently creates a primitive raw format PPM file of the rendered scene that was hard coded into the program at the time of building. 
 
 ## Contributing
 
