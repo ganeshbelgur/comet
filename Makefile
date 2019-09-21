@@ -1,16 +1,16 @@
 ########## COMMON VARIABLES ##########
 CXX = g++
 CFLAGS = -Wall
-MODULE_NAME = beamdish
+MODULE_NAME = orbinal
 BUILD_DIR = bin
 
 SOURCE_FILES = \
-	$(wildcard beamdish/*.cpp) \
-	$(wildcard beamdish/lights/*.cpp) \
-	$(wildcard beamdish/materials/*.cpp) \
-	$(wildcard beamdish/primitives/*.cpp) \
-	$(wildcard beamdish/textures/*.cpp) \
-	$(wildcard beamdish/utils/*.cpp)
+	$(wildcard orbinal/*.cpp) \
+	$(wildcard orbinal/lights/*.cpp) \
+	$(wildcard orbinal/materials/*.cpp) \
+	$(wildcard orbinal/primitives/*.cpp) \
+	$(wildcard orbinal/textures/*.cpp) \
+	$(wildcard orbinal/utils/*.cpp)
 
 OBJECT_FILES = $(patsubst %,$(BUILD_DIR)/%, $(notdir $(SOURCE_FILES:.cpp=.o)))
 

@@ -1,14 +1,14 @@
-# Beamdish
+# Orbinal
 
-Beamdish is an open source photo realistic 3D rendering software. It is based on the popular Monte Carlo method of rendering images of three-dimensional scenes such that the global illumination is faithful to reality. It is also a research-oriented rendering system that aims to develop cutting edge techniques one day. The aim is to help artists in the visual effects and animation industries to create spectacular lifelike images for the big screen and for the new age mediums such as VR, AR, etc.
+Orbinal is an open source photo realistic 3D rendering software. It is based on the popular Monte Carlo method of rendering images of three-dimensional scenes such that the global illumination is faithful to reality. It is also a research-oriented rendering system that aims to develop cutting edge techniques one day. The aim is to help artists in the visual effects and animation industries to create spectacular lifelike images for the big screen and for the new age mediums such as VR, AR, etc.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 Before starting, it is important to note that at the moment:
-* Beamdish is supported only on Linux and we hope to support other platforms soon.
-* Beamdish doesn't support any three-dimensional scene description file formats such as USD, Alembic, etc. So, the scenes need to be hard coded in the test cases for rendering purposes.
+* Orbinal is supported only on Linux and we hope to support other platforms soon.
+* Orbinal doesn't support any three-dimensional scene description file formats such as USD, Alembic, etc. So, the scenes need to be hard coded in the test cases for rendering purposes.
 
 ### Building from source
 
@@ -18,7 +18,7 @@ Before starting, it is important to note that at the moment:
 make
 ```
 
-2. This builds all the object files and the main executable, named `beamdish`, under the newly created `bin/` folder. To clean the build i.e. to delete the `bin/` folder and all the `*.o` files, run the command:
+2. This builds all the object files and the main executable, named `orbinal`, under the newly created `bin/` folder. To clean the build i.e. to delete the `bin/` folder and all the `*.o` files, run the command:
 
 ```bash
 make clean
@@ -32,24 +32,24 @@ make help
 
 ### Running the program
 
-Once you are done building the executable called `beamdish` from the source, you are good to execute it.
+Once you are done building the executable called `orbinal` from the source, you are good to execute it.
 To run the executable, use the following command at the project's root directory:
 
 ```bash
-./bin/beamdish > nameOfMyScene.ppm
+./bin/orbinal > nameOfMyScene.ppm
 ```
 
-The final product of any renderer is an image file and beamdish currently outputs the color information of each pixel of the image in the PPM file standard. The color information needs to be redirected into a PPM file to be able to view it from any standard Linux image viewers. The rendered image is of the hard coded scene in the program at the time of building.
+The final product of any renderer is an image file and orbinal currently outputs the color information of each pixel of the image in the PPM file standard. The color information needs to be redirected into a PPM file to be able to view it from any standard Linux image viewers. The rendered image is of the hard coded scene in the program at the time of building.
 
 ## Contributing
 
-Beamdish is in very early stages of development. However, we welcome your pull requests, ideas and suggestions!
+Orbinal is in very early stages of development. However, we welcome your pull requests, ideas and suggestions!
 
 Please read [CONTRIBUTING](docs/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. The coding standards for writing C++ code are described in detail at [CPPSTANDARDS](docs/CPPSTANDARDS.md)
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mrcivvy/beamdish/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mrcivvy/orbinal/tags).
 
 ## Authors
 
