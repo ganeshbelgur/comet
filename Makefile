@@ -1,16 +1,16 @@
 ########## COMMON VARIABLES ##########
 CXX = g++
 CFLAGS = -Wall
-MODULE_NAME = orbinal
+MODULE_NAME = comet
 BUILD_DIR = bin
 
 SOURCE_FILES = \
-	$(wildcard orbinal/*.cpp) \
-	$(wildcard orbinal/lights/*.cpp) \
-	$(wildcard orbinal/materials/*.cpp) \
-	$(wildcard orbinal/primitives/*.cpp) \
-	$(wildcard orbinal/textures/*.cpp) \
-	$(wildcard orbinal/utils/*.cpp)
+	$(wildcard comet/*.cpp) \
+	$(wildcard comet/lights/*.cpp) \
+	$(wildcard comet/materials/*.cpp) \
+	$(wildcard comet/primitives/*.cpp) \
+	$(wildcard comet/textures/*.cpp) \
+	$(wildcard comet/utils/*.cpp)
 
 OBJECT_FILES = $(patsubst %,$(BUILD_DIR)/%, $(notdir $(SOURCE_FILES:.cpp=.o)))
 
@@ -46,4 +46,3 @@ help:
 clean:
 	@echo "Removing the build folder..."
 	rm -rf bin
-
