@@ -2,6 +2,8 @@
 
 Comet is an open source photo realistic 3D rendering software. It is based on the popular Monte Carlo method of rendering images of three-dimensional scenes such that the global illumination is faithful to reality. It is also a research-oriented rendering system that aims to develop cutting edge techniques one day. The aim is to help artists in the visual effects and animation industries to create spectacular lifelike images for the big screen and for the new age mediums such as VR, AR, etc.
 
+![Comet Cornell Box Render](docs/renders/comet-cornell-box.jpg)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
