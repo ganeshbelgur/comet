@@ -53,7 +53,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Ganesh Belgur** - *Initial work* - [ganeshbelgur](https://github.com/mrcivvy)
+* **Ganesh Belgur** - *Initial work* - [ganeshbelgur](https://github.com/ganeshbelgur)
 
 ## License
 
